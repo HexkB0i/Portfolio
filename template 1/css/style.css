@@ -1,0 +1,155 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body, html{
+    margin: 0px auto;
+    color: white;
+}
+/* Fonts */
+@font-face {
+    font-family: "DIN Next LT W04 Light";
+    src: url("https://db.onlinewebfonts.com/t/3403275a8aeb6fc07122a8dd7f10e0ec.eot");
+    src: url("https://db.onlinewebfonts.com/t/3403275a8aeb6fc07122a8dd7f10e0ec.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/3403275a8aeb6fc07122a8dd7f10e0ec.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/3403275a8aeb6fc07122a8dd7f10e0ec.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/3403275a8aeb6fc07122a8dd7f10e0ec.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/3403275a8aeb6fc07122a8dd7f10e0ec.svg#DIN Next LT W04 Light")format("svg");
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../assets/fonts/OpenSansHebrewCondensed-Regular.ttf');
+}
+
+@font-face{
+    font-family: Avenir;
+    src: url('../assets/fonts/Avenir\ LT\ 35\ Light\ Regular.ttf')
+}
+
+/* Background */
+.background {
+    position: fixed;
+    background-image: url("../assets/images/background-crop.jpg");
+    width: 100%;
+    min-height: 105%;
+    top: -20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.blur-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+}
+
+/* Containers */
+.container-home{
+    position: fixed;
+    top: 30px;
+    right: 12vw;
+}
+.container-home a{
+    color: #a3825f;
+    text-decoration: none;
+    font-family: Avenir;
+}
+.container-main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+    justify-content: center;
+}
+.container-heading{
+    text-align: center;
+    margin-top: 20px;
+}
+.heading{
+    font-family: OpenSans;
+    font-size: 90px;
+}
+.container-progress{
+    display: flex;
+    justify-content: center;
+    flex-direction: inherit;
+    align-items: center;
+    gap: 10px;
+}
+.progress-heading{
+    font-family: Avenir;
+    letter-spacing: 8px;
+    word-spacing: 10px;
+    text-align: center;
+}
+.progress-bar{
+    margin-top: 20px;
+    height: 15px;
+    width: 60%;
+    background: #ffe2c2;
+}
+.progress-bar__done{
+    height: 100%;
+    width: 60%;
+    background-color: #8c6f51;
+}
+.progress-bar__values{
+    width: 60%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-family: Avenir;
+    letter-spacing: 3px;
+}
+.container-notify{
+    display: flex;
+    font-display: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+.notify-btn{
+    width: 150px;
+    height: 40px;
+    background-color: #8c6f51;
+    border: none;
+    font-family: DIN Next LT W04 Light;
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+.notify-btn:hover{
+    background-color: #604d37;
+}
+.container-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 40px;
+}
+.socials-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6vw;
+    height: 6vw;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+.socials-link img{
+    width: 45%;
+    height: 45%;
+}
+.copyright{
+    font-family: Avenir;
+    text-align: center;
+    margin: 120px auto 30px;
+}
