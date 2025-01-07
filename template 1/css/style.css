@@ -17,15 +17,17 @@ body, html{
     url("https://db.onlinewebfonts.com/t/3403275a8aeb6fc07122a8dd7f10e0ec.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/3403275a8aeb6fc07122a8dd7f10e0ec.svg#DIN Next LT W04 Light")format("svg");
 }
-
 @font-face {
     font-family: OpenSans;
     src: url('../assets/fonts/OpenSansHebrewCondensed-Regular.ttf');
 }
-
 @font-face{
     font-family: Avenir;
     src: url('../assets/fonts/Avenir\ LT\ 35\ Light\ Regular.ttf')
+}
+@font-face {
+    font-family: Icons;
+    src: url('../assets/fonts/MesloLGLDZNerdFont-Regular.ttf');
 }
 
 /* Background */
@@ -49,6 +51,21 @@ body, html{
     backdrop-filter: blur(20px);
 }
 
+/* Animations */
+@keyframes growth{
+    from{width: 0%;}
+    to{width: 70%;}
+}
+@keyframes rise{
+    from{
+        margin-top: 100%;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 /* Containers */
 .container-home{
     position: fixed;
@@ -59,6 +76,10 @@ body, html{
     color: #a3825f;
     text-decoration: none;
     font-family: Avenir;
+    transition: 0.4s;
+}
+.container-home a:hover{
+    color: #604d37;
 }
 .container-main{
     display: flex;
@@ -73,7 +94,7 @@ body, html{
 }
 .heading{
     font-family: OpenSans;
-    font-size: 90px;
+    font-size: 7vw;
 }
 .container-progress{
     display: flex;
@@ -96,8 +117,12 @@ body, html{
 }
 .progress-bar__done{
     height: 100%;
-    width: 60%;
+    width: 0%;
     background-color: #8c6f51;
+    animation: growth;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 .progress-bar__values{
     width: 60%;
@@ -124,6 +149,11 @@ body, html{
     cursor: pointer;
 
     transition: 0.4s;
+
+    animation: rise;
+    animation-duration: 0.8s;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
 }
 .notify-btn:hover{
     background-color: #604d37;
@@ -139,15 +169,28 @@ body, html{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    
     width: 6vw;
     height: 6vw;
+    
     border: 2px solid white;
     border-radius: 50px;
+
+    background: rgba(96, 77, 55, 0);
+
+    transition: 0.4s;    
+}
+.socials-link:hover{
+    border: 2px solid #604d37;
+    background: rgba(60, 48, 35, 0.5);
 }
 .socials-link img{
-    width: 45%;
-    height: 45%;
+    width: 3vw;
+    height: 3vw;
+    z-index: -1;
 }
+
 .copyright{
     font-family: Avenir;
     text-align: center;
