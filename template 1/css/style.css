@@ -76,16 +76,21 @@ body, html{
     color: #a3825f;
     text-decoration: none;
     font-family: Avenir;
+    font-size: 24px;
     transition: 0.4s;
 }
 .container-home a:hover{
     color: #604d37;
 }
+#home-icon{ 
+    width: 7vw;
+    height: 7vw;
+}
 .container-main{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 60%;
+    width: 60vw;
     justify-content: center;
 }
 .container-heading{
@@ -105,9 +110,10 @@ body, html{
 }
 .progress-heading{
     font-family: Avenir;
-    letter-spacing: 8px;
-    word-spacing: 10px;
+    letter-spacing: 0.7vw;
+    word-spacing: 1vw;
     text-align: center;
+    font-size: 1.5vw;
 }
 .progress-bar{
     margin-top: 20px;
@@ -132,6 +138,7 @@ body, html{
     justify-content: space-between;
 
     font-family: Avenir;
+    font-size: 1.2vw;
     letter-spacing: 3px;
 }
 .container-notify{
@@ -141,11 +148,13 @@ body, html{
     margin-top: 30px;
 }
 .notify-btn{
-    width: 150px;
-    height: 40px;
+    width: 14vw;
+    height: 4vw;
     background-color: #8c6f51;
     border: none;
+
     font-family: DIN Next LT W04 Light;
+    font-size: 1.7vw;
     cursor: pointer;
 
     transition: 0.4s;
@@ -175,7 +184,7 @@ body, html{
     height: 6vw;
     
     border: 2px solid white;
-    border-radius: 50px;
+    border-radius: 6vw;
 
     background: rgba(96, 77, 55, 0);
 
@@ -185,7 +194,7 @@ body, html{
     border: 2px solid #604d37;
     background: rgba(60, 48, 35, 0.5);
 }
-.socials-link img{
+.socials-icon{
     width: 3vw;
     height: 3vw;
     z-index: -1;
@@ -194,5 +203,6 @@ body, html{
 .copyright{
     font-family: Avenir;
     text-align: center;
-    margin: 120px auto 30px;
+    margin: 6vw auto;
+    font-size: 1vw;
 }
